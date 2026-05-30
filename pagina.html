@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scopri le migliori destinazioni turistiche, consigli di viaggio e offerte per le tue vacanze.">
+    <title>Benvenuti nel Mondo del Turismo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+    <header>
+      <img src="img/IMG_4128.jpg" width="160" height="180">
+    </header>
+   <nav>
+        <a href="pagina.html">Home</a>
+        <a href="pagina2.html">Destinazioni</a>
+        <a href="pagina3.html">Offerte</a>
+        <a href="pagina7.html">Contatti</a>
+    </nav>
+    <div class="slideshow-container">
+        <div class="slide">
+          <img src="img/spiaggia.avif" alt="Gatto 1">
+        </div>
+        <div class="slide">
+          <img src="img/egitto.avif" alt="Gatto 2">
+        </div>
+        <div class="slide">
+          <img src="img/beiji.avif" alt="Gatto 3">
+        </div>
+        <div class="slide">
+          <img src="img/pano2.avif" alt="Gatto 2">
+        </div>
+      
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+      </div>
+      
+
+    <div class="content">
+        <h2>Destinazioni Popolari</h2>
+        <div class="destinations">
+            <div class="destination">
+              <a href="pagina4.html"><img src="img/roma.avif" alt="Destinazione 1"></a>
+                <h3>Roma</h3>
+                <p>Visita la capitale italiana, ricca di storia, arte e cultura.</p>
+            </div>
+            <div class="destination">
+              <a href="pagina4.html"><img src="img/parigi.avif" alt="Destinazione 2"></a>
+                <h3>Parigi</h3>
+                <p>La città dell'amore e della moda, con monumenti iconici come la Torre Eiffel.</p>
+            </div>
+            <div class="destination">
+              <a href="pagina4.html"><img src="img/pechino.avif" alt="Destinazione 3"></a>
+                <h3>Pechino</h3>
+                <p>Esplora Pechino, la città imperiale dove tradizione e innovazione convivono armoniosamente.</p>
+            </div>
+        </div>
+        
+        <div style="text-align:center; margin-top: 30px;">
+            <a href="pagina2.html" style="font-size: 20px; color: black; text-decoration: none; padding: 10px 20px; border: 2px solid black; border-radius: 5px; background-color: #f4f4f4;">Scopri di più sulle destinazioni</a>
+        </div>
+    </div>
+    <script>
+      let slideIndex = 0;
+      let slides = document.getElementsByClassName("slide");
+      let slideInterval;
+    
+      function showSlide(n) {
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[n].style.display = "block";
+      }
+    
+      function changeSlide(n) {
+        slideIndex = (slideIndex + n + slides.length) % slides.length;
+        showSlide(slideIndex);
+        resetInterval();
+      }
+    
+      function autoSlide() {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+      }
+    
+      function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(autoSlide, 5000); // ogni 5 secondi
+      }
+    
+      window.onload = function() {
+        showSlide(slideIndex);
+        slideInterval = setInterval(autoSlide, 5000);
+      }
+    </script>      
+
+</body>
+</html>

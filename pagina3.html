@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offerte Hotel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eef2f3;
+    }
+    header {
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+    #offerte-hotel {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .offerta {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .offerta:hover {
+      transform: translateY(-5px);
+    }
+    .offerta img {
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+    }
+    .offerta-contenuto {
+      padding: 20px;
+      flex: 1;
+    }
+    .offerta-contenuto h3 {
+      margin-top: 0;
+      color: #007bff;
+    }
+    .offerta-contenuto p {
+      color: #555;
+    }
+    .offerta-contenuto button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .offerta-contenuto button:hover {
+      background-color: #0056b3;
+    }
+    .conferma-btn {
+      display: none;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      margin-top: 10px;
+      margin-left: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+.conferma-btn:hover {
+  background-color: #1e7e34;
+}
+.content {
+    text-align: center;
+    padding: 20px;
+}
+.torna {
+    text-align: left;
+    font-size: large;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <div class="torna">
+        <a href="pagina.html" style="color: black; text-decoration: none;" ><i class="fas fa-arrow-left"></i>  Home</a>
+    </div>
+    <h1>Benvenuti alle Nostre Offerte Hotel</h1>
+    <h2>Offerte Speciali</h2>
+  <section id="offerte-hotel">
+    <div class="offerta">
+      <img src="img/hotelcairo.jpg" alt="Kempinski Nile Hotel Cairo">
+      <div class="offerta-contenuto">
+        <h3>Kempinski Nile Hotel Cairo</h3>
+        <p><strong>Prezzo:</strong> €120 a notte</p>
+        <p><strong>Descrizione:</strong> 3 notti al prezzo di 2, colazione inclusa!</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelparigi.jpg" alt="Hôtel Astra Opéra - Astotel">
+      <div class="offerta-contenuto">
+        <h3>Hôtel Astra Opéra - Astotel</h3>
+        <p><strong>Prezzo:</strong> €150 a notte</p>
+        <p><strong>Descrizione:</strong> Sconto del 20% per soggiorni di almeno 5 notti.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelroma.jpg" alt="The RomeHello">
+      <div class="offerta-contenuto">
+        <h3>The RomeHello</h3>
+        <p><strong>Prezzo:</strong> €200 a notte</p>
+        <p><strong>Descrizione:</strong> Pacchetto SPA incluso per 2 persone.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotel pechino.jpg" alt="NUO Hotel Beijing">
+      <div class="offerta-contenuto">
+        <h3>NUO Hotel Beijing</h3>
+        <p><strong>Prezzo:</strong> €180 a notte</p>
+        <p><strong>Descrizione:</strong> Vista mozzafiato e cena romantica inclusa.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+    
+    <div class="offerta">
+      <img src="img/hotellondra.jpg" alt="Kempinski Nile Hotel Cairo">
+      <div class="offerta-contenuto">
+        <h3>The Resident Covent Garden</h3>
+        <p><strong>Prezzo:</strong> €400 a notte</p>
+        <p><strong>Descrizione:</strong> Offerta weekend con aperitivo di benvenuto e parcheggio gratuito.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hoteltokyo.jpg" alt="Hôtel Astra Opéra - Astotel">
+      <div class="offerta-contenuto">
+        <h3>The Tokyo Station Hotel</h3>
+        <p><strong>Prezzo:</strong> €135 a notte</p>
+        <p><strong>Descrizione:</strong> Suite con balcone vista mare e colazione servita in camera.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelvenezia.jpg" alt="The RomeHello">
+      <div class="offerta-contenuto">
+        <h3>Hotel Palazzo Stern</h3>
+        <p><strong>Prezzo:</strong> €450 a notte</p>
+        <p><strong>Descrizione:</strong> Accesso gratuito alla piscina panoramica e centro fitness.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelsicilia.jpg" alt="Kempinski Nile Hotel Cairo">
+      <div class="offerta-contenuto">
+        <h3>Hotel Taodomus</h3>
+        <p><strong>Prezzo:</strong> €300 a notte</p>
+        <p><strong>Descrizione:</strong> Atmosfera familiare, posizione centrale e Wi-Fi incluso.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelberlino.jpg" alt="Hôtel Astra Opéra - Astotel">
+      <div class="offerta-contenuto">
+        <h3>Adina Apartment Hotel Berlin Mitte</h3>
+        <p><strong>Prezzo:</strong> €140 a notte</p>
+        <p><strong>Descrizione:</strong> Camere moderne con vista oceano e accesso diretto alla spiaggia.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelnewyork.jpg" alt="The RomeHello">
+      <div class="offerta-contenuto">
+        <h3>Motto by Hilton New York City Chelsea</h3>
+        <p><strong>Prezzo:</strong> €400 a notte</p>
+        <p><strong>Descrizione:</strong> Immerso nella natura, include escursioni guidate e colazione biologica.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hoteldubai.jpg" alt="Kempinski Nile Hotel Cairo">
+      <div class="offerta-contenuto">
+        <h3>Grand Cosmopolitan Hotel</h3>
+        <p><strong>Prezzo:</strong> €60 a notte</p>
+        <p><strong>Descrizione:</strong> Ideale per famiglie, con miniclub gratuito e ristorante a buffet.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelbarcellona.jpg" alt="Hôtel Astra Opéra - Astotel">
+      <div class="offerta-contenuto">
+        <h3>H10 Madison</h3>
+        <p><strong>Prezzo:</strong> €100 a notte</p>
+        <p><strong>Descrizione:</strong> Relax assicurato con giardino interno e area benessere.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelsydney.jpg" alt="The RomeHello">
+      <div class="offerta-contenuto">
+        <h3>Little National Hotel Sydney</h3>
+        <p><strong>Prezzo:</strong> €150 a notte</p>
+        <p><strong>Descrizione:</strong> Ottimo per amanti della montagna, con sconto skipass incluso.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotellasvegas.jpg" alt="NUO Hotel Beijing">
+      <div class="offerta-contenuto">
+        <h3>Bellagio Las Vegas</h3>
+        <p><strong>Prezzo:</strong> €399 a notte</p>
+        <p><strong>Descrizione:</strong> Ottimo per amanti della montagna, con sconto skipass incluso.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelamsterdam.jpg" alt="Kempinski Nile Hotel Cairo">
+      <div class="offerta-contenuto">
+        <h3>Ambassade Hotel</h3>
+        <p><strong>Prezzo:</strong> €500 a notte</p>
+        <p><strong>Descrizione:</strong> Ottimo per amanti della montagna, con sconto skipass incluso.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotellosangeles.jpg" alt="Hôtel Astra Opéra - Astotel">
+      <div class="offerta-contenuto">
+        <h3>Sheraton Universal Hotel</h3>
+        <p><strong>Prezzo:</strong> €399 a notte</p>
+        <p><strong>Descrizione:</strong> Sostenibile e moderno, con ricarica auto elettriche e colazione vegana.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelistanbul.jpg" alt="The RomeHello">
+      <div class="offerta-contenuto">
+        <h3>Romance Istanbul Hotel</h3>
+        <p><strong>Prezzo:</strong> €260 a notte</p>
+        <p><strong>Descrizione:</strong> Alloggio in stile rustico nel cuore della campagna italiana.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="img/hotelmarrakech.jpg" alt="NUO Hotel Beijing">
+      <div class="offerta-contenuto">
+        <h3>La Maison Arabe</h3>
+        <p><strong>Prezzo:</strong> €150 a notte</p>
+        <p><strong>Descrizione:</strong> A due passi dal lago, offre noleggio bici e kayak gratuito.</p>
+        <button onclick="mostraConferma(this)">Prenota ora</button>
+        <a href="pagina5.html" class="conferma-btn" style="display: none;">Conferma</a>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    function mostraConferma(bottonePrenota) {
+      const contenutoOfferta = bottonePrenota.parentElement;
+      const confermaBtn = contenutoOfferta.querySelector('.conferma-btn');
+      confermaBtn.style.display = 'inline-block';
+    }
+  </script>  
+
+</body>
+</html>
+
+
